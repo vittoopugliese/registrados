@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="block" #block></div>
+  <div class="qContainer">
+
+
+    <div class="qstn">
+      <h1> {{questions[questionNumber].title}} </h1>
+      <img src="{{questions[questionNumber].img}}" alt="car-crash" width="184px"
+        *ngIf="questions[questionNumber].img">
+    </div>
+
+    <div class="form">
+      <button class="ans" #a (click)="submit($event, 'a')">{{questions[questionNumber].a}}</button>
+      <button class="ans" #b (click)="submit($event, 'b')">{{questions[questionNumber].b}}</button>
+      <button class="ans" #c (click)="submit($event, 'c')"
+        *ngIf="questions[questionNumber].c !== ''">{{questions[questionNumber].c}}</button>
+
+    </div>
+    <div class="log">
+      <h4>✅: {{rights}}</h4>
+      <h4 class="cross"><span>❎</span>: {{wrongs}}</h4>
+      <div class="timer">
+        {{minutes}}:{{seconds}}
+      </div>
+    </div>
+  </div>
+</div>

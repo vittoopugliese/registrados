@@ -1,0 +1,41 @@
+nav {
+  width: 100vw;
+  height: 64px;
+  background-color: rgb(174, 174, 174);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  filter: drop-shadow(0px 0px 8px black);
+}
+.navContainer {
+  width: 90%;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.brand a {
+  font-size: 26px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+.navLink {
+  font-size: 18px;
+}
+.active {
+  font-weight: 600;
+}
